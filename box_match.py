@@ -28,7 +28,7 @@ gray1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)  # 转灰度
 gray2 = cv2.cvtColor(img2, cv2.COLOR_BGR2GRAY)  # 转灰度
 
 
-# (2) 建立SIFT 目标
+# (2) 建立SIFT 目标//
 sift = cv2.xfeatures2d.SIFT_create()
 """
  Fast Library for Approximate Nearest Neighbors，是FLANN的全称
