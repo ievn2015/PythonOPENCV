@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
 """
 Created on Mon May  7 19:41:10 2018
-图像的分块搜索
-@author: Windows
+@author: Shenjiwei
 """
 import cv2
 import numpy as np
 MIN_MATCH_COUNT = 4
-imgname1 = "002-a.jpg"
-imgname2 = "002-b.jpg"
+imgname1 = "003-a.jpg"
+imgname2 = "003 -b.jpg"
 img1 = cv2.imread(imgname1)
 img2 = cv2.imread(imgname2)
 gray1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)

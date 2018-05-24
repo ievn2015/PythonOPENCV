@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
   
 # 使用2g-r-b分离土壤与背景,根据颜色不同可以选择权重  
   
-src = cv2.imread('009-a.jpg')
+src = cv2.imread('003-a.jpg')
 win = cv2.namedWindow('origin', flags=0)
 cv2.imshow('origin', src)  
   
