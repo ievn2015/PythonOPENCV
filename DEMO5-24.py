@@ -7,8 +7,8 @@ Created on Mon May  7 19:41:10 2018
 import cv2
 import numpy as np
 MIN_MATCH_COUNT = 4
-imgname1 = "003-a.jpg"
-imgname2 = "003-b.jpg"
+imgname1 = "002-a.jpg"
+imgname2 = "002-b.jpg"
 img1 = cv2.imread(imgname1)
 img2 = cv2.imread(imgname2)
 gray1 = cv2.cvtColor(img1, cv2.COLOR_BGR2GRAY)
@@ -35,7 +35,7 @@ src_sub_a = []
 dst_sub_a = []
 for i in range(0,a):
     dist = np.linalg.norm(src_pts[i] - dst_pts[i])
-    if dist > 150:
+    if dist > 100:
         src_sub_a.append(src_pts[i])
         dst_sub_a.append(dst_pts[i])
 
@@ -110,7 +110,7 @@ if len(good1) > MIN_MATCH_COUNT:
         cv2.CHAIN_APPROX_NONE)
     c = sorted(cnts, key=cv2.contourArea, reverse=True)[0]
     print (len(c))
-    if len(c) > 100 :
+    if len(c) > 110 :
         rect = cv2.minAreaRect(c)
         box = np.int0(cv2.boxPoints(rect))
     #dist1 = np.linalg.norm(box[0] - box[-1])
@@ -133,7 +133,7 @@ if len(good1) > MIN_MATCH_COUNT:
         cv2.CHAIN_APPROX_SIMPLE)
     c = sorted(cnts, key=cv2.contourArea, reverse=True)[0]
     #print (c)
-    if len(c) > 150 :
+    if len(c) > 110 :
         rect = cv2.minAreaRect(c)
         box = np.int0(cv2.boxPoints(rect))
     #dist1 = np.linalg.norm(box[0] - box[-1])
