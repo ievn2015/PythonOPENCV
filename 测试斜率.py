@@ -9,8 +9,8 @@ import numpy as np
 
 MIN_MATCH_COUNT = 4  # 至少需要4个健壮特征点
 
-imgname1 = "003-a.jpg"
-imgname2 = "003-b.jpg"
+imgname1 = "006-a.jpg"
+imgname2 = "006-b.jpg"
 
 img1 = cv2.imread(imgname1)
 img2 = cv2.imread(imgname2)
